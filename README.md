@@ -38,6 +38,9 @@ optional arguments:
 
 ## Examples
 
+```
+original image.jpg
+```
 ![original](../master/images/image.jpg)
 ---
 ```
