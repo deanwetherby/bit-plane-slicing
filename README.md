@@ -31,4 +31,12 @@ optional arguments:
 
 ## Examples
 
-TODO
+![original](../master/images/image.jpg)
+![bit plane 0 (MSB)](../master/images/output_0.jpg)
+![bit plane 1 (MSB)](../master/images/output_1.jpg)
+![bit plane 2 (MSB)](../master/images/output_2.jpg)
+![bit plane 3 (MSB)](../master/images/output_3.jpg)
+![bit plane 4 (MSB)](../master/images/output_4.jpg)
+![bit plane 5 (MSB)](../master/images/output_5.jpg)
+![bit plane 6 (MSB)](../master/images/output_6.jpg)
+![bit plane 7 (MSB)](../master/images/output_7.jpg)
