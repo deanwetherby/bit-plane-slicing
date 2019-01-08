@@ -1,12 +1,12 @@
 # Bit Plane Slicing
 
-Zeroize bit planes in 8-bit color images as a form of image augmentation. 
+Zeroize bit planes in 8-bit color images as a form of image augmentation. Bit plane slicing has previously been used for image compression.
 
+## References
 [Wikipedia:bit plane](https://en.wikipedia.org/wiki/Bit_plane)
 
 [Bit plane slicing](https://nptel.ac.in/courses/117104069/chapter_8/8_13.html)
 
-Bit plane slicing has been used for image compression.
 [Image Compression using bit planes](https://spin.atomicobject.com/2013/10/08/image-compression-bit-planes/)
 
 ## Installing on Linux
