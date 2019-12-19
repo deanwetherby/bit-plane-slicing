@@ -15,7 +15,7 @@ Zeroize bit planes in 8-bit color images as a form of image augmentation. Bit pl
 $ git clone https://github.com/deanwetherby/bit-plane-slicing
 $ cd bit-plane-slicing
 $ python3 -m venv ./venv
-$ source activate venv/bin/activate
+$ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
