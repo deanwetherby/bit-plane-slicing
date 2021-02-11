@@ -2,21 +2,15 @@
 
 Zeroize bit planes in 8-bit color images as a form of image augmentation. Bit plane slicing has previously been used for image compression.
 
-## References
-[Wikipedia:bit plane](https://en.wikipedia.org/wiki/Bit_plane)
-
-[Bit plane slicing](https://nptel.ac.in/courses/117104069/chapter_8/8_13.html)
-
-[Image Compression using bit planes](https://spin.atomicobject.com/2013/10/08/image-compression-bit-planes/)
-
 ## Installing on Linux
 
 ```
 $ git clone https://github.com/deanwetherby/bit-plane-slicing
 $ cd bit-plane-slicing
-$ python3 -m venv ./venv
+$ python3 -m venv venv
 $ source venv/bin/activate
-$ pip install -r requirements.txt
+(venv) $ pytnon -m pip install --upgrade pip setuptools wheel
+(venv) $ python -m pip install -r requirements.txt
 ```
 
 ## Script usage
@@ -82,3 +76,11 @@ original image.jpg
 (venv) $ python main.py --input images/image.jpg --output images/output_7.jpg --plane 7
 ```
 ![bit plane 7 (MSB)](../master/images/output_7.jpg)
+
+## References
+[Wikipedia:bit plane](https://en.wikipedia.org/wiki/Bit_plane)
+
+[Bit plane slicing](https://nptel.ac.in/courses/117104069/chapter_8/8_13.html)
+
+[Image Compression using bit planes](https://spin.atomicobject.com/2013/10/08/image-compression-bit-planes/)
+
