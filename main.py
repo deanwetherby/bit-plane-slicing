@@ -71,14 +71,14 @@ def bit_plane_slice(b_bits, g_bits, r_bits, bit_plane_list):
 
     if bit_plane_list is not None:
         for bit_plane in bit_plane_list:
-            logging.debug('Zeroizing {} bit_plane'.format(int(bit_plane)))
+            logging.debug(f'Zeroizing {int(bit_plane)} bit_plane')
             # zeroize the bit plane in each RGB channel
             b_bits[:,:,int(bit_plane)] = 0
             g_bits[:,:,int(bit_plane)] = 0
             r_bits[:,:,int(bit_plane)] = 0
     
 
-def process_arguments():
+def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input', help="Input image path")
     parser.add_argument('-o', '--output', help="Output image path")
@@ -87,29 +87,28 @@ def process_arguments():
 
 
 def main():
-
-    args = process_arguments()
+    args = parse_arguments()
     logging.debug(args)
 
-    logging.debug("Reading image from {}".format(args.input))
+    logging.debug(f"Reading image from {args.input}")
     img = cv2.imread(args.input)
 
     if img is not None and len(img.shape) == 3 and img.shape[2] == 3:
-
         height, width, channels = img.shape
         img_size = (height, width)
         bit_size = img_size + (8,)
-        logging.debug("Image size: {}".format(img_size + (channels,)))
-        logging.debug("Bit size: {}".format(bit_size))
+        logging.debug(f"Image size: {img_size + (channels,)}")
+        logging.debug(f"Bit size: {bit_size}")
 
         b_bits, g_bits, r_bits = convert_image_to_bit_planes(img, bit_size)
         bit_plane_slice(b_bits, g_bits, r_bits, args.plane)
         img = convert_bit_planes_to_image(b_bits, g_bits, r_bits, img_size)
 
-        logging.debug("Saving image to {}".format(args.output))
+        logging.debug(f"Saving image to {args.output}")
         cv2.imwrite(args.output, img)
     else:
         logging.error("Image was either not read in correctly or is not color.")
+
 
 if __name__ == '__main__':
     main()
