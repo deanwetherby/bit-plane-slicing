@@ -45,7 +45,6 @@ def convert_bit_planes_to_image(b_bits, g_bits, r_bits, img_size):
 
     Returns
     img: OpenCV image
-
     """
 
     # convert back to 8-bit integer in the original shape
@@ -66,7 +65,6 @@ def bit_plane_slice(b_bits, g_bits, r_bits, bit_plane_list):
     g_bits: Green channel bit planes
     r_bits: Red channel bit planes
     bit_plane_list: list of channels to zeroize
-
     """
 
     if bit_plane_list is not None:
@@ -103,6 +101,7 @@ def main():
         b_bits, g_bits, r_bits = convert_image_to_bit_planes(img, bit_size)
         bit_plane_slice(b_bits, g_bits, r_bits, args.plane)
         img = convert_bit_planes_to_image(b_bits, g_bits, r_bits, img_size)
+        print(type(img))
 
         logging.debug(f"Saving image to {args.output}")
         cv2.imwrite(args.output, img)
