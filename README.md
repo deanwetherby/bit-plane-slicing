@@ -16,7 +16,7 @@ $ source venv/bin/activate
 ## Script usage
 
 ```
-$ python main.py -h
+(venv) $ python main.py -h
 usage: main.py [-h] [-i INPUT] [-o OUTPUT] [-p PLANE [PLANE ...]]
 
 optional arguments:
