@@ -9,7 +9,7 @@ $ git clone https://github.com/deanwetherby/bit-plane-slicing
 $ cd bit-plane-slicing
 $ python3 -m venv venv
 $ source venv/bin/activate
-(venv) $ pytnon -m pip install --upgrade pip setuptools wheel
+(venv) $ python -m pip install --upgrade pip setuptools wheel
 (venv) $ python -m pip install -r requirements.txt
 ```
 
